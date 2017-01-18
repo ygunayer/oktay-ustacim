@@ -19,7 +19,7 @@ const defaultOptions = {
 
 function extractRecipeId(el) {
     const r = /tarifler\/(\d+).*/ig.exec(el);
-    return (r && r[1]) || null;
+    return Number(r && r[1]) || null;
 }
 
 function getRecipe(id, callback) {
